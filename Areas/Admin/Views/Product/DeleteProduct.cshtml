@@ -1,0 +1,40 @@
+﻿@model Product
+
+<h1>Delete Product</h1>
+<form method="post" class="w-50 p-5 shadow-lg" asp-action="Delete" asp-controller="Product">
+	<input type="hidden" asp-for="ID" />
+	<label asp-for="Title"></label>
+	<div class="d-flex">
+		<input type="text" asp-for="Title" class="form-control" />
+		<span asp-validation-for="Title"></span>
+	</div>
+
+
+
+
+	label asp-for="Price"></label>
+	<div class="d-flex">
+		<input type="text" asp-for="Price" class="form-control" disabled />
+		<span asp-validation-for="Price"></span>
+
+
+
+		label asp-for="Description"></label>
+		<div class="d-flex">
+			<textarea asp-for="Description" class="form-control"disabled></textarea> />
+			<span asp-validation-for="Description"></span>
+
+
+			label asp-for="Count_In_Stock"></label>
+			<div class="d-flex">
+				<textarea asp-for="Count_In_Stock" class="form-control"resize:none disabled></textarea> />
+				<span asp-validation-for="Count_In_Stock"></span>
+
+				label asp-for="Rating"></label>
+				<div class="d-flex">
+					<input type="text" asp-for="Rating" class="form-control" disabled />
+					<span asp-validation-for="Rating"></span>
+
+	<button class="btn btn-warning">Submit</button><a asp-action="Index">Go Back</a>
+</form>
+

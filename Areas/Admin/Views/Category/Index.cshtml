@@ -1,0 +1,27 @@
+﻿@model List<Category>
+<h1>Categories</h1>
+<table class="table table-boardered text-centre">
+	<thead class="text-dark">
+		<tr>
+			<td>S.No.</td>
+			<td>Category Name</td>
+			<td>Action</td>
+		</tr>
+
+	</thead>
+	<tbody>
+		@foreach(var obj in Model)
+		{
+			<tr>
+			<td>@obj.ID</td>
+			<td>@obj.Name</td>
+			<td>
+				<div class="btn-group">
+					<a asp-controller="Category" asp-action="UpdateCategory" asp-route-id="@obj.ID"><button class="btn btn-warning">Update</button></a>
+					<a asp-controller="Category" asp-action="DeleteCategory" asp-route-id="@obj.ID"><button class="btn btn-danger">Delete</button></a>
+				</div>
+			</td>
+			</tr>
+		}
+	</tbody>
+</table>

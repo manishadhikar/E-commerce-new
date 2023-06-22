@@ -1,0 +1,11 @@
+﻿@model Category
+<h1>Add New Category</h1>
+
+<form method="post" class="w-50 m-5 p-5 shadow-lg">
+	<label asp-for="Name"></label>
+	<div class="d-flex">
+	<input type="text" asp-for="Name" class="form-control"/>
+	<span asp-validation-for="Name"></span>
+	<button class="btn btn-warning">Submit</button>
+	</div>
+</form>
